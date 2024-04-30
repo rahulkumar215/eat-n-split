@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   color: #495057;
   display: flex;
   align-items: center;
@@ -166,4 +166,43 @@ form h2 {
   text-transform: uppercase;
   letter-spacing: -0.5px;
   margin-bottom: 1.6rem;
+}
+
+@media only screen and (max-width: 53.12em) {
+  .app {
+    grid-template-columns: 50rem;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 4rem;
+    margin: 5rem 0;
+  }
+}
+
+@media only screen and (max-width: 32.5em) {
+  .app {
+    grid-template-columns: 30rem;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2rem;
+    margin: 5rem 0;
+  }
+
+  form {
+    display: block;
+  }
+
+  input,
+  select {
+    display: block;
+    margin: 1.6rem 0;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+
+  .sidebar > .button {
+    margin: 0;
+  }
 }
